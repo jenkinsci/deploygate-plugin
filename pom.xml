@@ -3,7 +3,7 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>1.466</version><!-- which version of Jenkins is this plugin built against? -->
+    <version>1.480</version><!-- which version of Jenkins is this plugin built against? -->
   </parent>
 
   <groupId>org.jenkins-ci.plugins.deploygate</groupId>
@@ -25,4 +25,30 @@
       <url>http://repo.jenkins-ci.org/public/</url>
     </pluginRepository>
   </pluginRepositories>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.apache.httpcomponents</groupId>
+  		<artifactId>httpclient</artifactId>
+  		<version>4.2.2</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.httpcomponents</groupId>
+  		<artifactId>httpmime</artifactId>
+  		<version>4.2.2</version>
+  	</dependency>
+  </dependencies>
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>org.apache.httpcomponents</groupId>
+  			<artifactId>httpclient</artifactId>
+  			<version>4.2.2</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.apache.httpcomponents</groupId>
+  			<artifactId>httpmime</artifactId>
+  			<version>4.2.2</version>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
 </project>

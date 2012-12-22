@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jenkinsci.plugins.deploygate.DeployGateNotifier_-DescriptorImpl>
+  <helpRedirect/>
+  <useOwnerName>bols-blue</useOwnerName>
+  <useApiKey>7d095196ae23bb41a8350e8cf3b85e4433be7aaf</useApiKey>
+</org.jenkinsci.plugins.deploygate.DeployGateNotifier_-DescriptorImpl>

@@ -1,5 +1,15 @@
 package org.jenkinsci.plugins.deploygate;
 
+import hudson.Extension;
+import hudson.Launcher;
+import hudson.model.BuildListener;
+import hudson.model.AbstractBuild;
+import hudson.model.AbstractProject;
+import hudson.tasks.BuildStepDescriptor;
+import hudson.tasks.BuildStepMonitor;
+import hudson.tasks.Publisher;
+import hudson.util.FormValidation;
+
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -10,22 +20,24 @@ import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.QueryParameter;
 import org.kohsuke.stapler.StaplerRequest;
 
-import hudson.Extension;
-import hudson.Launcher;
-import hudson.model.AbstractProject;
-import hudson.model.Build;
-import hudson.model.BuildListener;
-import hudson.model.Descriptor.FormException;
-import hudson.tasks.BuildStepDescriptor;
-import hudson.tasks.BuildStepMonitor;
-import hudson.tasks.Builder;
-import hudson.tasks.Notifier;
-import hudson.tasks.Publisher;
-import hudson.util.FormValidation;
-
 public class DeployGateNotifier extends Publisher {
 
 	private String name;
+
+	@Override
+	public boolean perform(AbstractBuild build, Launcher launcher,
+			BuildListener listener) {
+		String UrlString = "https://deploygate.com/api/users/"
+				+ getDescriptor().getUseOwnerName() + "/apps";
+
+		DeployGateUploader uploder = new DeployGateUploader(UrlString,
+				"test send", getDescriptor().getUseApiKey(), name);
+		uploder.upload();
+		listener.getLogger().println("uploder setting " + uploder);
+		listener.getLogger().println(
+				"Hello, " + getDescriptor().getUseApiKey() + name + "!");
+		return true;
+	}
 
 	public BuildStepMonitor getRequiredMonitorService() {
 		// TODO Auto-generated method stub
@@ -81,12 +93,6 @@ public class DeployGateNotifier extends Publisher {
 			return FormValidation.ok();
 		}
 
-		public boolean isApplicable(Class<? extends AbstractProject> aClass) {
-			// Indicates that this builder can be used with all kinds of project
-			// types
-			return true;
-		}
-
 		/**
 		 * This human readable name is used in the configuration screen.
 		 */
@@ -108,12 +114,17 @@ public class DeployGateNotifier extends Publisher {
 			return super.configure(req, formData);
 		}
 
-		public String getUseFrench() {
+		public String getUseOwnerName() {
 			return useOwnerName;
 		}
 
 		public String getUseApiKey() {
 			return useApiKey;
+		}
+
+		@Override
+		public boolean isApplicable(Class<? extends AbstractProject> jobType) {
+			return false;
 		}
 
 	}

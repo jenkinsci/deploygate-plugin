@@ -1,0 +1,10 @@
+ユーザー[8mha:AAAAlh+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymousが実行
+ビルドします。 ワークスペース: /home/bols/eclipse/jenkins-spa/tmp/deploygate-plugin/work/jobs/test/workspace
+[workspace] $ /bin/sh -xe /tmp/hudson5289976181980393743.sh
++ pwd
+/home/bols/eclipse/jenkins-spa/tmp/deploygate-plugin/work/jobs/test/workspace
++ ls
+testter-debug.apk
+uploder setting DeployGateUploader [UrlString=https://deploygate.com/api/users/bols-blue/apps, fileName=testter-debug.apk, message=org.apache.http.entity.mime.content.StringBody@1839755, token=org.apache.http.entity.mime.content.StringBody@445a89]
+Hello, 7d095196ae23bb41a8350e8cf3b85e4433be7aaftestter-debug.apk!
+Finished: SUCCESS
