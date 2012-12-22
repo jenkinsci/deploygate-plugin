@@ -1,0 +1,19 @@
+ユーザー[8mha:AAAAih+LCAAAAAAAAABb85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyT1dMUiOWdZ/mImBiZPBrac1Lz0kgwfBubSopwSBiGfrMSyRP2cxLx0/eCSosy8dOuKIgYpNOOcITTIMAYIYGRiYKgoADI4Sxi49EuLU4v080pzcgCbGluCjwAAAA==[0manonymousが実行
+ビルドします。 ワークスペース: /home/bols/eclipse/jenkins-spa/tmp/deploygate-plugin/work/jobs/test/workspace
+Simulating a failure
+Build step 'Always fail' changed build result to FAILURE
+Build step 'Always fail' marked build as failure
+ERROR: Publisher org.jenkinsci.plugins.deploygate.DeployGateNotifier aborted due to exception
+[8mha:AAAAWB+LCAAAAAAAAABb85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mjava.lang.UnsupportedOperationException
+	at hudson.tasks.BuildStepCompatibilityLayer.perform(BuildStepCompatibilityLayer.java:95)
+	at hudson.tasks.BuildStepCompatibilityLayer.perform(BuildStepCompatibilityLayer.java:59)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:19)
+	at hudson.model.AbstractBuild$AbstractRunner.perform(AbstractBuild.java:710)
+	at hudson.model.AbstractBuild$AbstractRunner.performAllBuildSteps(AbstractBuild.java:685)
+	at hudson.model.Build$RunnerImpl.post2(Build.java:162)
+	at hudson.model.AbstractBuild$AbstractRunner.post(AbstractBuild.java:632)
+	at hudson.model.Run.run(Run.java:1463)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:46)
+	at hudson.model.ResourceController.execute(ResourceController.java:88)
+	at hudson.model.Executor.run(Executor.java:239)
+Finished: FAILURE
