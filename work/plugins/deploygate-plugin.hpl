@@ -3,11 +3,11 @@ Group-Id: org.jenkins-ci.plugins.deploygate
 Short-Name: deploygate-plugin
 Long-Name: deploygate-plugin
 Url: http://jenkins-ci.org/plugin/deploygate-plugin/
-Plugin-Version: 1.0-SNAPSHOT (private-12/22/2012 22:28-bols)
+Plugin-Version: 1.1-SNAPSHOT (private-12/23/2012 01:04-bols)
 Hudson-Version: 1.480
 Jenkins-Version: 1.480
-Plugin-Dependencies: ui-samples-plugin:1.480,maven-plugin:1.480,javado
- c:1.0,ant:1.1,subversion:1.26
+Plugin-Dependencies: ui-samples-plugin:1.480,maven-plugin:1.480,subver
+ sion:1.26,javadoc:1.0,ant:1.1
 Plugin-Developers: 
 Libraries: /home/bols/eclipse/jenkins-spa/tmp/deploygate-plugin/target
  /classes,/home/bols/.m2/repository/org/apache/httpcomponents/httpclie

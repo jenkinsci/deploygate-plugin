@@ -34,8 +34,6 @@ public class DeployGateNotifier extends Publisher {
 				"test send", getDescriptor().getUseApiKey(), name);
 		uploder.upload();
 		listener.getLogger().println("uploder setting " + uploder);
-		listener.getLogger().println(
-				"Hello, " + getDescriptor().getUseApiKey() + name + "!");
 		return true;
 	}
 
@@ -97,7 +95,7 @@ public class DeployGateNotifier extends Publisher {
 		 * This human readable name is used in the configuration screen.
 		 */
 		public String getDisplayName() {
-			return "Say hello world";
+			return "DeployGatePlugin";
 		}
 
 		@Override
@@ -124,7 +122,7 @@ public class DeployGateNotifier extends Publisher {
 
 		@Override
 		public boolean isApplicable(Class<? extends AbstractProject> jobType) {
-			return false;
+			return true;
 		}
 
 	}

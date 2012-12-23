@@ -11,12 +11,7 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers class="vector"/>
   <concurrentBuild>false</concurrentBuild>
-  <builders>
-    <hudson.tasks.Shell>
-      <command>pwd
-ls</command>
-    </hudson.tasks.Shell>
-  </builders>
+  <builders/>
   <publishers>
     <org.jenkinsci.plugins.deploygate.DeployGateNotifier>
       <name>testter-debug.apk</name>
