@@ -19,6 +19,20 @@
     </repository>
   </repositories>
 
+  <developers>
+    <developer>
+      <id>bols-blue</id>
+      <name>Hisayoshi Suehiro</name>
+      <email>bols-blue@lnc.jp</email>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:ssh://github.com/jenkinsci/deploygate-plugin.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/jenkinsci/deploygate-plugin.git</developerConnection>
+    <url>https://github.com/jenkinsci/deploygate-plugin</url>
+  </scm>
+
   <pluginRepositories>
     <pluginRepository>
       <id>repo.jenkins-ci.org</id>
