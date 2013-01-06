@@ -8,7 +8,7 @@
 
   <groupId>org.jenkins-ci.plugins.deploygate</groupId>
   <artifactId>deploygate-plugin</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.1</version>
   <packaging>hpi</packaging>
 
   <!-- get every artifact through repo.jenkins-ci.org, which proxies all the artifacts that we need -->
@@ -18,6 +18,20 @@
       <url>http://repo.jenkins-ci.org/public/</url>
     </repository>
   </repositories>
+
+  <developers>
+    <developer>
+      <id>bols-blue</id>
+      <name>Hisayoshi Suehiro</name>
+      <email>bols-blue@lnc.jp</email>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:ssh://github.com/jenkinsci/deploygate-plugin.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/jenkinsci/deploygate-plugin.git</developerConnection>
+    <url>https://github.com/jenkinsci/deploygate-plugin</url>
+  </scm>
 
   <pluginRepositories>
     <pluginRepository>
