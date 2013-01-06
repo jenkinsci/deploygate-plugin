@@ -8,7 +8,7 @@
 
   <groupId>org.jenkins-ci.plugins.deploygate</groupId>
   <artifactId>deploygate-plugin</artifactId>
-  <version>1.2</version>
+  <version>1.3-SNAPSHOT</version>
   <packaging>hpi</packaging>
 
   <!-- get every artifact through repo.jenkins-ci.org, which proxies all the artifacts that we need -->
